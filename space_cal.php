@@ -3,20 +3,17 @@
 function check($n) {
     $length = strlen($n);
     $count = 0;
-    for ($i=0; $i <$length ; $i++) { 
+    for ($i=0; $i <$length ; $i++) {
         if ($n[$i] == ' ') {
             $count++;
         }
         //  $n[$i];
     }
-    if ($count > 1) {
-        return false;
-    }
-    return true;
+    return $count;
 }
 
 $str = "This is a string";
 
-var_dump(check($str));
+echo "Space in the string is ".check($str);
 
 ?>
